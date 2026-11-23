@@ -1,13 +1,13 @@
 *** Settings ***
-Library    ${CURDIR}/../libraries/TestbenchLibrary.py    ${CURDIR}/../config/testbench.yaml
+Library    ${CURDIR}/../libraries/CoreLibrary.py    ${CURDIR}/../config/testbench.yaml
 Suite Setup       Connect
 Suite Teardown    Disconnect
 
 *** Test Cases ***
 Ping Board
-    ${resp}=    Send Command    ping
+    ${resp}=    Ping
     Should Contain    ${resp}    PONG
 
 Help Lists Commands
-    ${resp}=    Send Command    help
+    ${resp}=    Help
     Should Contain    ${resp}    gpio

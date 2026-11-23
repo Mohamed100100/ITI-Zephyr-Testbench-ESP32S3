@@ -1,16 +1,24 @@
-import serial
+import os
 import time
+import serial
 import yaml
 
-class TestbenchLibrary:
-    def __init__(self, config_path="${CURDIR}/../config/testbench.yaml"):
-        # resolve relative to this file if needed
-        import os
-        if not os.path.isabs(config_path) and not os.path.exists(config_path):
-            base = os.path.dirname(os.path.abspath(__file__))
-            config_path = os.path.join(base, "..", "config", "testbench.yaml")
-        with open(config_path) as f:
-            cfg = yaml.safe_load(f)["testbench"]
+
+def load_config(config_path="config.yaml"):
+    if not os.path.isabs(config_path) and not os.path.exists(config_path):
+        base = os.path.dirname(os.path.abspath(__file__))
+        config_path = os.path.join(base, "..", "config", "testbench.yaml")
+    # fallback name
+    if not os.path.exists(config_path):
+        base = os.path.dirname(os.path.abspath(__file__))
+        config_path = os.path.join(base, "..", "..", "config", "testbench.yaml")
+    with open(config_path) as f:
+        return yaml.safe_load(f)["testbench"]
+
+
+class SerialConnection:
+    def __init__(self, config_path=None):
+        cfg = load_config(config_path) if config_path else load_config()
         self.port = cfg["port"]
         self.baud = cfg["baudrate"]
         self.timeout = cfg["timeout"]
@@ -26,6 +34,7 @@ class TestbenchLibrary:
     def disconnect(self):
         if self.ser and self.ser.is_open:
             self.ser.close()
+            self.ser = None
 
     def _read_until_prompt(self):
         buf = ""
@@ -38,7 +47,7 @@ class TestbenchLibrary:
                     break
         return buf
 
-    def send_command(self, cmd):
+    def send(self, cmd):
         self.ser.write((cmd + "\n").encode())
         self.ser.flush()
         buf = self._read_until_prompt()
@@ -52,15 +61,3 @@ class TestbenchLibrary:
             if l:
                 out.append(l)
         return "\n".join(out)
-
-    def expect_ok(self, cmd):
-        resp = self.send_command(cmd)
-        if "OK" not in resp:
-            raise AssertionError(f"Expected OK for '{cmd}', got: {resp}")
-        return resp
-
-    def expect_val(self, cmd, expected):
-        resp = self.send_command(cmd)
-        if f"VAL {expected}" not in resp:
-            raise AssertionError(f"Expected 'VAL {expected}' for '{cmd}', got: {resp}")
-        return resp

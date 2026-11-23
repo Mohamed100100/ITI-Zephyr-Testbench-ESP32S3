@@ -1,22 +1,25 @@
 *** Settings ***
-Library    ${CURDIR}/../../libraries/TestbenchLibrary.py    ${CURDIR}/../../config/testbench.yaml
+Library    ${CURDIR}/../../libraries/GpioLibrary.py    ${CURDIR}/../../config/testbench.yaml
 Suite Setup       Connect
 Suite Teardown    Disconnect
 
 *** Test Cases ***
 Configure Output Pin
-    Expect Ok    gpio config 7 out
+    Configure Pin    7    out
 
 Set And Get High
-    Expect Ok    gpio config 7 out
-    Expect Ok    gpio set 7 1
-    Expect Val    gpio get 7    1
+    Configure Pin    7    out
+    Set Pin    7    1
+    ${v}=    Get Pin    7
+    Should Be Equal As Integers    ${v}    1
 
 Set And Get Low
-    Expect Ok    gpio config 7 out
-    Expect Ok    gpio set 7 0
-    Expect Val    gpio get 7    0
+    Configure Pin    7    out
+    Set Pin    7    0
+    ${v}=    Get Pin    7
+    Should Be Equal As Integers    ${v}    0
 
 Configure Input Pin
-    Expect Ok    gpio config 8 in
-    Expect Val    gpio get 8    0
+    Configure Pin    8    in
+    ${v}=    Get Pin    8
+    Should Be Equal As Integers    ${v}    0
