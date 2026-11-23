@@ -62,7 +62,5 @@ robot --dryrun tests/
 ## Notes
 
 - Close any serial monitor before running tests.
-- Wire GPIO7 → GPIO8 for readback tests.
-- SPI needs MISO↔MOSI loopback for non-zero readback.
 EOF
 echo done

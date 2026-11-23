@@ -20,14 +20,7 @@ replies. This gives automated, repeatable hardware validation.
 
 - Connect the ESP32-S3 Mini to the host with the USB-C cable.
 - The console appears as `/dev/ttyACM0` (Linux) at 115200 baud.
-- No extra wiring needed for basic tests; for readback tests wire GPIO7 → GPIO8.
-
-### GPIO loopback (optional, for readback tests)
-
-```
-GPIO7 (output)  --->  GPIO8 (input)
-```
-
+- 
 ## Repository layout
 
 ```
