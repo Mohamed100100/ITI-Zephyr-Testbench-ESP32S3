@@ -1072,4 +1072,22 @@
  status = "okay";
 };
 # 0 "<command-line>" 2
+# 1 "/media/gemy/Linux_Workspace/ITI/Zypher_WS/ITI-Zephyr-Testbench-ESP32S3/Testbench/boards/weact_esp32s3_mini_procpu.overlay" 1
+
+&spi2 {
+    status = "okay";
+};
+
+&adc0 {
+    status = "okay";
+};
+
+&adc1 {
+    status = "okay";
+};
+
+&ledc0 {
+    status = "okay";
+};
+# 0 "<command-line>" 2
 # 1 "/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr/misc/empty_file.c"

@@ -13,6 +13,7 @@ cmake:
      - '/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr/dts/bindings'
     files:
      - '/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr/boards/weact/esp32s3_mini/weact_esp32s3_mini_procpu.dts'
+     - '/media/gemy/Linux_Workspace/ITI/Zypher_WS/ITI-Zephyr-Testbench-ESP32S3/Testbench/boards/weact_esp32s3_mini_procpu.overlay'
     include-dirs:
      - '/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/modules/hal/ambiq/dts'
      - '/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/modules/hal/atmel/include'
@@ -39,6 +40,8 @@ cmake:
      - '/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr/dts/arm'
      - '/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr/dts/arc'
      - '/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr/dts'
+    user-files:
+     - '/media/gemy/Linux_Workspace/ITI/Zypher_WS/ITI-Zephyr-Testbench-ESP32S3/Testbench/boards/weact_esp32s3_mini_procpu.overlay'
   kconfig:
     files:
      - '/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr/boards/weact/esp32s3_mini/weact_esp32s3_mini_procpu_defconfig'

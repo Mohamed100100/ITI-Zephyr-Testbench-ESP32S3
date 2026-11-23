@@ -325,7 +325,7 @@ DTC:FILEPATH=/home/gemy/zephyr-sdk-1.0.0/hosttools/sysroots/x86_64-pokysdk-linux
 // parameter. These settings will override the settings in the
 // board's .dts file. Multiple files may be listed, e.g. DTC_OVERLAY_FILE="dts1.overlay
 // dts2.overlay"
-DTC_OVERLAY_FILE:STRING=
+DTC_OVERLAY_FILE:STRING=/media/gemy/Linux_Workspace/ITI/Zypher_WS/ITI-Zephyr-Testbench-ESP32S3/Testbench/boards/weact_esp32s3_mini_procpu.overlay
 
 //Path to a program.
 ESPTOOL_EXECUTABLE:FILEPATH=/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/.venv/bin/esptool
@@ -556,7 +556,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=155
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=159
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

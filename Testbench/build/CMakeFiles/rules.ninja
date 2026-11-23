@@ -271,6 +271,25 @@ rule C_STATIC_LIBRARY_LINKER__drivers__interrupt_controller_
 #############################################
 # Rule for compiling C files.
 
+rule C_COMPILER__drivers__adc_unscanned_
+  depfile = $DEP_FILE
+  deps = gcc
+  command = ccache ${LAUNCHER}${CODE_CHECK}/home/gemy/zephyr-sdk-1.0.0/gnu/xtensa-espressif_esp32s3_zephyr-elf/bin/xtensa-espressif_esp32s3_zephyr-elf-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building C object $out
+
+
+#############################################
+# Rule for linking C static library.
+
+rule C_STATIC_LIBRARY_LINKER__drivers__adc_
+  command = $PRE_LINK && ccache /media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/.venv/lib/python3.12/site-packages/cmake/data/bin/cmake -E rm -f $TARGET_FILE && ccache /home/gemy/zephyr-sdk-1.0.0/gnu/xtensa-espressif_esp32s3_zephyr-elf/bin/xtensa-espressif_esp32s3_zephyr-elf-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /home/gemy/zephyr-sdk-1.0.0/gnu/xtensa-espressif_esp32s3_zephyr-elf/bin/xtensa-espressif_esp32s3_zephyr-elf-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking C static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling C files.
+
 rule C_COMPILER__drivers__clock_control_unscanned_
   depfile = $DEP_FILE
   deps = gcc
@@ -347,6 +366,25 @@ rule C_STATIC_LIBRARY_LINKER__drivers__pinctrl_
 #############################################
 # Rule for compiling C files.
 
+rule C_COMPILER__drivers__pwm_unscanned_
+  depfile = $DEP_FILE
+  deps = gcc
+  command = ccache ${LAUNCHER}${CODE_CHECK}/home/gemy/zephyr-sdk-1.0.0/gnu/xtensa-espressif_esp32s3_zephyr-elf/bin/xtensa-espressif_esp32s3_zephyr-elf-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building C object $out
+
+
+#############################################
+# Rule for linking C static library.
+
+rule C_STATIC_LIBRARY_LINKER__drivers__pwm_
+  command = $PRE_LINK && ccache /media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/.venv/lib/python3.12/site-packages/cmake/data/bin/cmake -E rm -f $TARGET_FILE && ccache /home/gemy/zephyr-sdk-1.0.0/gnu/xtensa-espressif_esp32s3_zephyr-elf/bin/xtensa-espressif_esp32s3_zephyr-elf-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /home/gemy/zephyr-sdk-1.0.0/gnu/xtensa-espressif_esp32s3_zephyr-elf/bin/xtensa-espressif_esp32s3_zephyr-elf-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking C static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling C files.
+
 rule C_COMPILER__drivers__serial_unscanned_
   depfile = $DEP_FILE
   deps = gcc
@@ -358,6 +396,25 @@ rule C_COMPILER__drivers__serial_unscanned_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__drivers__serial_
+  command = $PRE_LINK && ccache /media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/.venv/lib/python3.12/site-packages/cmake/data/bin/cmake -E rm -f $TARGET_FILE && ccache /home/gemy/zephyr-sdk-1.0.0/gnu/xtensa-espressif_esp32s3_zephyr-elf/bin/xtensa-espressif_esp32s3_zephyr-elf-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /home/gemy/zephyr-sdk-1.0.0/gnu/xtensa-espressif_esp32s3_zephyr-elf/bin/xtensa-espressif_esp32s3_zephyr-elf-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking C static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling C files.
+
+rule C_COMPILER__drivers__spi_unscanned_
+  depfile = $DEP_FILE
+  deps = gcc
+  command = ccache ${LAUNCHER}${CODE_CHECK}/home/gemy/zephyr-sdk-1.0.0/gnu/xtensa-espressif_esp32s3_zephyr-elf/bin/xtensa-espressif_esp32s3_zephyr-elf-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building C object $out
+
+
+#############################################
+# Rule for linking C static library.
+
+rule C_STATIC_LIBRARY_LINKER__drivers__spi_
   command = $PRE_LINK && ccache /media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/.venv/lib/python3.12/site-packages/cmake/data/bin/cmake -E rm -f $TARGET_FILE && ccache /home/gemy/zephyr-sdk-1.0.0/gnu/xtensa-espressif_esp32s3_zephyr-elf/bin/xtensa-espressif_esp32s3_zephyr-elf-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /home/gemy/zephyr-sdk-1.0.0/gnu/xtensa-espressif_esp32s3_zephyr-elf/bin/xtensa-espressif_esp32s3_zephyr-elf-ranlib $TARGET_FILE && $POST_BUILD
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT

@@ -664,10 +664,12 @@ __device_deps_start = .;
 KEEP(*(SORT(.__device_deps_pass2*)));
 __device_deps_end = .;
  } > drom0_0_seg AT > FLASH
+adc_driver_api_area : ALIGN_WITH_INPUT { _adc_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._adc_driver_api.static.*))); _adc_driver_api_list_end = .;; } > drom0_0_seg AT > FLASH
 gpio_driver_api_area : ALIGN_WITH_INPUT { _gpio_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._gpio_driver_api.static.*))); _gpio_driver_api_list_end = .;; } > drom0_0_seg AT > FLASH
+pwm_driver_api_area : ALIGN_WITH_INPUT { _pwm_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._pwm_driver_api.static.*))); _pwm_driver_api_list_end = .;; } > drom0_0_seg AT > FLASH
+spi_driver_api_area : ALIGN_WITH_INPUT { _spi_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._spi_driver_api.static.*))); _spi_driver_api_list_end = .;; } > drom0_0_seg AT > FLASH
 shared_irq_driver_api_area : ALIGN_WITH_INPUT { _shared_irq_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._shared_irq_driver_api.static.*))); _shared_irq_driver_api_list_end = .;; } > drom0_0_seg AT > FLASH
 crypto_driver_api_area : ALIGN_WITH_INPUT { _crypto_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._crypto_driver_api.static.*))); _crypto_driver_api_list_end = .;; } > drom0_0_seg AT > FLASH
-adc_driver_api_area : ALIGN_WITH_INPUT { _adc_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._adc_driver_api.static.*))); _adc_driver_api_list_end = .;; } > drom0_0_seg AT > FLASH
 auxdisplay_driver_api_area : ALIGN_WITH_INPUT { _auxdisplay_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._auxdisplay_driver_api.static.*))); _auxdisplay_driver_api_list_end = .;; } > drom0_0_seg AT > FLASH
 bbram_driver_api_area : ALIGN_WITH_INPUT { _bbram_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._bbram_driver_api.static.*))); _bbram_driver_api_list_end = .;; } > drom0_0_seg AT > FLASH
 biometric_driver_api_area : ALIGN_WITH_INPUT { _biometric_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._biometric_driver_api.static.*))); _biometric_driver_api_list_end = .;; } > drom0_0_seg AT > FLASH
@@ -716,7 +718,6 @@ otp_driver_api_area : ALIGN_WITH_INPUT { _otp_driver_api_list_start = .; KEEP(*(
 peci_driver_api_area : ALIGN_WITH_INPUT { _peci_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._peci_driver_api.static.*))); _peci_driver_api_list_end = .;; } > drom0_0_seg AT > FLASH
 ps2_driver_api_area : ALIGN_WITH_INPUT { _ps2_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._ps2_driver_api.static.*))); _ps2_driver_api_list_end = .;; } > drom0_0_seg AT > FLASH
 ptp_clock_driver_api_area : ALIGN_WITH_INPUT { _ptp_clock_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._ptp_clock_driver_api.static.*))); _ptp_clock_driver_api_list_end = .;; } > drom0_0_seg AT > FLASH
-pwm_driver_api_area : ALIGN_WITH_INPUT { _pwm_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._pwm_driver_api.static.*))); _pwm_driver_api_list_end = .;; } > drom0_0_seg AT > FLASH
 regulator_parent_driver_api_area : ALIGN_WITH_INPUT { _regulator_parent_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._regulator_parent_driver_api.static.*))); _regulator_parent_driver_api_list_end = .;; } > drom0_0_seg AT > FLASH
 regulator_driver_api_area : ALIGN_WITH_INPUT { _regulator_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._regulator_driver_api.static.*))); _regulator_driver_api_list_end = .;; } > drom0_0_seg AT > FLASH
 reset_driver_api_area : ALIGN_WITH_INPUT { _reset_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._reset_driver_api.static.*))); _reset_driver_api_list_end = .;; } > drom0_0_seg AT > FLASH
@@ -725,7 +726,6 @@ rtc_driver_api_area : ALIGN_WITH_INPUT { _rtc_driver_api_list_start = .; KEEP(*(
 sdhc_driver_api_area : ALIGN_WITH_INPUT { _sdhc_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._sdhc_driver_api.static.*))); _sdhc_driver_api_list_end = .;; } > drom0_0_seg AT > FLASH
 sensor_driver_api_area : ALIGN_WITH_INPUT { _sensor_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._sensor_driver_api.static.*))); _sensor_driver_api_list_end = .;; } > drom0_0_seg AT > FLASH
 smbus_driver_api_area : ALIGN_WITH_INPUT { _smbus_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._smbus_driver_api.static.*))); _smbus_driver_api_list_end = .;; } > drom0_0_seg AT > FLASH
-spi_driver_api_area : ALIGN_WITH_INPUT { _spi_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._spi_driver_api.static.*))); _spi_driver_api_list_end = .;; } > drom0_0_seg AT > FLASH
 syscon_driver_api_area : ALIGN_WITH_INPUT { _syscon_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._syscon_driver_api.static.*))); _syscon_driver_api_list_end = .;; } > drom0_0_seg AT > FLASH
 tee_driver_api_area : ALIGN_WITH_INPUT { _tee_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._tee_driver_api.static.*))); _tee_driver_api_list_end = .;; } > drom0_0_seg AT > FLASH
 uaol_driver_api_area : ALIGN_WITH_INPUT { _uaol_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._uaol_driver_api.static.*))); _uaol_driver_api_list_end = .;; } > drom0_0_seg AT > FLASH

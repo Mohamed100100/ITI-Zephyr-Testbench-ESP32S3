@@ -74,6 +74,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("/media/gemy/Linux_Workspace/ITI/Zypher_WS/ITI-Zephyr-Testbench-ESP32S3/Testbench/build/zephyr/drivers/adc/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("/media/gemy/Linux_Workspace/ITI/Zypher_WS/ITI-Zephyr-Testbench-ESP32S3/Testbench/build/zephyr/drivers/clock_control/cmake_install.cmake")
 endif()
 
@@ -94,7 +99,17 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("/media/gemy/Linux_Workspace/ITI/Zypher_WS/ITI-Zephyr-Testbench-ESP32S3/Testbench/build/zephyr/drivers/pwm/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("/media/gemy/Linux_Workspace/ITI/Zypher_WS/ITI-Zephyr-Testbench-ESP32S3/Testbench/build/zephyr/drivers/serial/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/media/gemy/Linux_Workspace/ITI/Zypher_WS/ITI-Zephyr-Testbench-ESP32S3/Testbench/build/zephyr/drivers/spi/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)

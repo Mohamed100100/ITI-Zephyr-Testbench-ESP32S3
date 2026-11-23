@@ -7,6 +7,10 @@
  */
 
 /* Symbol declarations */
+extern void * const z_impl_adc_channel_setup;
+extern void * const z_impl_adc_get_decoder;
+extern void * const z_impl_adc_read;
+extern void * const z_impl_adc_read_async;
 extern void * const z_impl_device_deinit;
 extern void * const z_impl_device_get_binding;
 extern void * const z_impl_device_get_by_dt_nodelabel;
@@ -127,6 +131,15 @@ extern void * const z_impl_log_filter_set;
 extern void * const z_impl_log_frontend_filter_set;
 extern void * const z_impl_log_panic;
 extern void * const z_impl_log_process;
+extern void * const z_impl_pwm_capture_cycles;
+extern void * const z_impl_pwm_disable_capture;
+extern void * const z_impl_pwm_disable_dma;
+extern void * const z_impl_pwm_enable_capture;
+extern void * const z_impl_pwm_enable_dma;
+extern void * const z_impl_pwm_get_cycles_per_sec;
+extern void * const z_impl_pwm_set_cycles;
+extern void * const z_impl_spi_release;
+extern void * const z_impl_spi_transceive;
 extern void * const z_impl_sys_clock_getrtoffset;
 extern void * const z_impl_sys_clock_hw_cycles_per_sec_runtime_get;
 extern void * const z_impl_sys_clock_nanosleep;
@@ -169,6 +182,10 @@ extern void * const z_impl_zephyr_read_stdin;
 extern void * const z_impl_zephyr_write_stdout;
 
 /* Exported symbols */
+EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_adc_channel_setup);
+EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_adc_get_decoder);
+EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_adc_read);
+EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_adc_read_async);
 EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_device_deinit);
 EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_device_get_binding);
 EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_device_get_by_dt_nodelabel);
@@ -289,6 +306,15 @@ EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_log_filter_set);
 EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_log_frontend_filter_set);
 EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_log_panic);
 EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_log_process);
+EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_pwm_capture_cycles);
+EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_pwm_disable_capture);
+EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_pwm_disable_dma);
+EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_pwm_enable_capture);
+EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_pwm_enable_dma);
+EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_pwm_get_cycles_per_sec);
+EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_pwm_set_cycles);
+EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_spi_release);
+EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_spi_transceive);
 EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_sys_clock_getrtoffset);
 EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_sys_clock_hw_cycles_per_sec_runtime_get);
 EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_sys_clock_nanosleep);

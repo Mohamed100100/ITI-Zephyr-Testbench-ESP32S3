@@ -1,0 +1,16 @@
+/* Enable peripherals used by the testbench */
+&spi2 {
+    status = "okay";
+};
+
+&adc0 {
+    status = "okay";
+};
+
+&adc1 {
+    status = "okay";
+};
+
+&ledc0 {
+    status = "okay";
+};

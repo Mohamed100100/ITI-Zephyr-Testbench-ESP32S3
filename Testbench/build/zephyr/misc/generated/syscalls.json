@@ -153,6 +153,38 @@
     ],
     [
         [
+            "int adc_channel_setup",
+            "const struct device *dev, const struct adc_channel_cfg *channel_cfg"
+        ],
+        "adc.h",
+        true
+    ],
+    [
+        [
+            "int adc_read",
+            "const struct device *dev, const struct adc_sequence *sequence"
+        ],
+        "adc.h",
+        true
+    ],
+    [
+        [
+            "int adc_read_async",
+            "const struct device *dev, const struct adc_sequence *sequence, struct k_poll_signal *async"
+        ],
+        "adc.h",
+        true
+    ],
+    [
+        [
+            "int adc_get_decoder",
+            "const struct device *dev, const struct adc_decoder_api **api"
+        ],
+        "adc.h",
+        true
+    ],
+    [
+        [
             "int gpio_pin_interrupt_configure",
             "const struct device *port, gpio_pin_t pin, gpio_flags_t flags"
         ],
@@ -229,6 +261,62 @@
             "const struct device *dev"
         ],
         "gpio.h",
+        true
+    ],
+    [
+        [
+            "int pwm_set_cycles",
+            "const struct device *dev, uint32_t channel, uint32_t period, uint32_t pulse, pwm_flags_t flags"
+        ],
+        "pwm.h",
+        true
+    ],
+    [
+        [
+            "int pwm_get_cycles_per_sec",
+            "const struct device *dev, uint32_t channel, uint64_t *cycles"
+        ],
+        "pwm.h",
+        true
+    ],
+    [
+        [
+            "int pwm_enable_capture",
+            "const struct device *dev, uint32_t channel"
+        ],
+        "pwm.h",
+        true
+    ],
+    [
+        [
+            "int pwm_disable_capture",
+            "const struct device *dev, uint32_t channel"
+        ],
+        "pwm.h",
+        true
+    ],
+    [
+        [
+            "int pwm_enable_dma",
+            "const struct device *dev, uint32_t channel"
+        ],
+        "pwm.h",
+        true
+    ],
+    [
+        [
+            "int pwm_disable_dma",
+            "const struct device *dev, uint32_t channel"
+        ],
+        "pwm.h",
+        true
+    ],
+    [
+        [
+            "int pwm_capture_cycles",
+            "const struct device *dev, uint32_t channel, pwm_flags_t flags, uint32_t *period, uint32_t *pulse, k_timeout_t timeout"
+        ],
+        "pwm.h",
         true
     ],
     [
@@ -421,6 +509,22 @@
             "const struct device *dev, uint32_t cmd, uint32_t p"
         ],
         "uart.h",
+        true
+    ],
+    [
+        [
+            "int spi_transceive",
+            "const struct device *dev, const struct spi_config *config, const struct spi_buf_set *tx_bufs, const struct spi_buf_set *rx_bufs"
+        ],
+        "spi.h",
+        true
+    ],
+    [
+        [
+            "int spi_release",
+            "const struct device *dev, const struct spi_config *config"
+        ],
+        "spi.h",
         true
     ],
     [
@@ -1309,38 +1413,6 @@
             "unsigned int reason"
         ],
         "error.h",
-        false
-    ],
-    [
-        [
-            "int adc_channel_setup",
-            "const struct device *dev, const struct adc_channel_cfg *channel_cfg"
-        ],
-        "adc.h",
-        false
-    ],
-    [
-        [
-            "int adc_read",
-            "const struct device *dev, const struct adc_sequence *sequence"
-        ],
-        "adc.h",
-        false
-    ],
-    [
-        [
-            "int adc_read_async",
-            "const struct device *dev, const struct adc_sequence *sequence, struct k_poll_signal *async"
-        ],
-        "adc.h",
-        false
-    ],
-    [
-        [
-            "int adc_get_decoder",
-            "const struct device *dev, const struct adc_decoder_api **api"
-        ],
-        "adc.h",
         false
     ],
     [
@@ -3289,62 +3361,6 @@
     ],
     [
         [
-            "int pwm_set_cycles",
-            "const struct device *dev, uint32_t channel, uint32_t period, uint32_t pulse, pwm_flags_t flags"
-        ],
-        "pwm.h",
-        false
-    ],
-    [
-        [
-            "int pwm_get_cycles_per_sec",
-            "const struct device *dev, uint32_t channel, uint64_t *cycles"
-        ],
-        "pwm.h",
-        false
-    ],
-    [
-        [
-            "int pwm_enable_capture",
-            "const struct device *dev, uint32_t channel"
-        ],
-        "pwm.h",
-        false
-    ],
-    [
-        [
-            "int pwm_disable_capture",
-            "const struct device *dev, uint32_t channel"
-        ],
-        "pwm.h",
-        false
-    ],
-    [
-        [
-            "int pwm_enable_dma",
-            "const struct device *dev, uint32_t channel"
-        ],
-        "pwm.h",
-        false
-    ],
-    [
-        [
-            "int pwm_disable_dma",
-            "const struct device *dev, uint32_t channel"
-        ],
-        "pwm.h",
-        false
-    ],
-    [
-        [
-            "int pwm_capture_cycles",
-            "const struct device *dev, uint32_t channel, pwm_flags_t flags, uint32_t *period, uint32_t *pulse, k_timeout_t timeout"
-        ],
-        "pwm.h",
-        false
-    ],
-    [
-        [
             "int reset_status",
             "const struct device *dev, uint32_t id, uint8_t *status"
         ],
@@ -3717,22 +3733,6 @@
             "const struct device *dev, uint16_t addr, uint8_t cmd, uint8_t snd_count, uint8_t *snd_buf, uint8_t *rcv_count, uint8_t *rcv_buf"
         ],
         "smbus.h",
-        false
-    ],
-    [
-        [
-            "int spi_transceive",
-            "const struct device *dev, const struct spi_config *config, const struct spi_buf_set *tx_bufs, const struct spi_buf_set *rx_bufs"
-        ],
-        "spi.h",
-        false
-    ],
-    [
-        [
-            "int spi_release",
-            "const struct device *dev, const struct spi_config *config"
-        ],
-        "spi.h",
         false
     ],
     [

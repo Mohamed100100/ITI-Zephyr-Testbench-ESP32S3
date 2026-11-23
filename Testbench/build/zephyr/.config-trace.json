@@ -1,5 +1,16 @@
 [
   [
+    "CONFIG_DT_HAS_ESPRESSIF_ESP32_ADC_ENABLED",
+    "n",
+    "bool",
+    "y",
+    "default",
+    [
+      "/media/gemy/Linux_Workspace/ITI/Zypher_WS/ITI-Zephyr-Testbench-ESP32S3/Testbench/build/Kconfig/Kconfig.dts",
+      2693
+    ]
+  ],
+  [
     "CONFIG_DT_HAS_ESPRESSIF_ESP32_AES_ENABLED",
     "n",
     "bool",
@@ -96,6 +107,17 @@
     [
       "/media/gemy/Linux_Workspace/ITI/Zypher_WS/ITI-Zephyr-Testbench-ESP32S3/Testbench/build/Kconfig/Kconfig.dts",
       2768
+    ]
+  ],
+  [
+    "CONFIG_DT_HAS_ESPRESSIF_ESP32_LEDC_ENABLED",
+    "n",
+    "bool",
+    "y",
+    "default",
+    [
+      "/media/gemy/Linux_Workspace/ITI/Zypher_WS/ITI-Zephyr-Testbench-ESP32S3/Testbench/build/Kconfig/Kconfig.dts",
+      2783
     ]
   ],
   [
@@ -324,6 +346,17 @@
     null
   ],
   [
+    "CONFIG_ADC_INIT_PRIORITY",
+    "y",
+    "int",
+    "50",
+    "default",
+    [
+      "/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr/drivers/adc/Kconfig",
+      72
+    ]
+  ],
+  [
     "CONFIG_MAIN_STACK_SIZE",
     "y",
     "int",
@@ -376,9 +409,12 @@
     "CONFIG_SPI",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "y",
+    "assign",
+    [
+      "/media/gemy/Linux_Workspace/ITI/Zypher_WS/ITI-Zephyr-Testbench-ESP32S3/Testbench/prj.conf",
+      11
+    ]
   ],
   [
     "CONFIG_MIPI_DSI",
@@ -8061,6 +8097,114 @@
     "CONFIG_ADC",
     "y",
     "bool",
+    "y",
+    "assign",
+    [
+      "/media/gemy/Linux_Workspace/ITI/Zypher_WS/ITI-Zephyr-Testbench-ESP32S3/Testbench/prj.conf",
+      9
+    ]
+  ],
+  [
+    "CONFIG_ADC_ASYNC",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_ADC_STREAM",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_ADC_DEFAULT_RTIO",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_ADC_LOG_LEVEL_OFF",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_ADC_LOG_LEVEL_ERR",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_ADC_LOG_LEVEL_WRN",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_ADC_LOG_LEVEL_INF",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_ADC_LOG_LEVEL_DBG",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_ADC_LOG_LEVEL_DEFAULT",
+    "y",
+    "bool",
+    "y",
+    "default",
+    [
+      "/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
+      5
+    ]
+  ],
+  [
+    "CONFIG_ADC_LOG_LEVEL",
+    "n",
+    "int",
+    "3",
+    "default",
+    [
+      "/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
+      36
+    ]
+  ],
+  [
+    "CONFIG_ADC_ESP32",
+    "y",
+    "bool",
+    "y",
+    "default",
+    [
+      "/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr/drivers/adc/Kconfig.esp32",
+      7
+    ]
+  ],
+  [
+    "CONFIG_ADC_ESP32_DMA",
+    "y",
+    "bool",
     null,
     "unset",
     null
@@ -9047,9 +9191,131 @@
     "CONFIG_PWM",
     "y",
     "bool",
+    "y",
+    "assign",
+    [
+      "/media/gemy/Linux_Workspace/ITI/Zypher_WS/ITI-Zephyr-Testbench-ESP32S3/Testbench/prj.conf",
+      10
+    ]
+  ],
+  [
+    "CONFIG_PWM_LOG_LEVEL_OFF",
+    "y",
+    "bool",
     null,
     "unset",
     null
+  ],
+  [
+    "CONFIG_PWM_LOG_LEVEL_ERR",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_PWM_LOG_LEVEL_WRN",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_PWM_LOG_LEVEL_INF",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_PWM_LOG_LEVEL_DBG",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_PWM_LOG_LEVEL_DEFAULT",
+    "y",
+    "bool",
+    "y",
+    "default",
+    [
+      "/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
+      5
+    ]
+  ],
+  [
+    "CONFIG_PWM_LOG_LEVEL",
+    "n",
+    "int",
+    "3",
+    "default",
+    [
+      "/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
+      36
+    ]
+  ],
+  [
+    "CONFIG_PWM_INIT_PRIORITY",
+    "y",
+    "int",
+    "50",
+    "default",
+    [
+      "/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr/drivers/pwm/Kconfig",
+      20
+    ]
+  ],
+  [
+    "CONFIG_PWM_CAPTURE",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_PWM_EVENT",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_PWM_WITH_DMA",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_PWM_LED_ESP32",
+    "y",
+    "bool",
+    "y",
+    "default",
+    [
+      "/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr/drivers/pwm/Kconfig.esp32",
+      9
+    ]
+  ],
+  [
+    "CONFIG_PWM_TC_INIT_PRIORITY",
+    "y",
+    "int",
+    "50",
+    "default",
+    [
+      "/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr/drivers/pwm/Kconfig.sam0_tc",
+      15
+    ]
   ],
   [
     "CONFIG_RETAINED_MEM",
@@ -9298,6 +9564,141 @@
   ],
   [
     "CONFIG_SMBUS",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_SPI_ASYNC",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_SPI_RTIO",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_SPI_SLAVE",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_SPI_EXTENDED_MODES",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_SPI_INIT_PRIORITY",
+    "y",
+    "int",
+    "50",
+    "default",
+    [
+      "/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr/drivers/spi/Kconfig",
+      77
+    ]
+  ],
+  [
+    "CONFIG_SPI_COMPLETION_TIMEOUT_TOLERANCE",
+    "y",
+    "int",
+    "200",
+    "default",
+    [
+      "/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr/drivers/spi/Kconfig",
+      83
+    ]
+  ],
+  [
+    "CONFIG_SPI_LOG_LEVEL_OFF",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_SPI_LOG_LEVEL_ERR",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_SPI_LOG_LEVEL_WRN",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_SPI_LOG_LEVEL_INF",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_SPI_LOG_LEVEL_DBG",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_SPI_LOG_LEVEL_DEFAULT",
+    "y",
+    "bool",
+    "y",
+    "default",
+    [
+      "/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
+      5
+    ]
+  ],
+  [
+    "CONFIG_SPI_LOG_LEVEL",
+    "n",
+    "int",
+    "3",
+    "default",
+    [
+      "/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
+      36
+    ]
+  ],
+  [
+    "CONFIG_ESP32_SPIM",
+    "y",
+    "bool",
+    "y",
+    "default",
+    [
+      "/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr/drivers/spi/Kconfig.esp32",
+      8
+    ]
+  ],
+  [
+    "CONFIG_SPI_ESP32_INTERRUPT",
     "y",
     "bool",
     null,

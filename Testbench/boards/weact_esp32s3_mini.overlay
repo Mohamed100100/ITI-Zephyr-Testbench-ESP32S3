@@ -1,9 +1,0 @@
-/ {
-    aliases {
-        /* Logical names used by the command protocol */
-    };
-};
-
-&gpio0 {
-    status = "okay";
-};

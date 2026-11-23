@@ -28,4 +28,5 @@ empty_file.o: \
  /media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr/include/zephyr/dt-bindings/led/led.h \
  /media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr/boards/weact/esp32s3_mini/weact_esp32s3_mini-pinctrl.dtsi \
  /media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr/include/zephyr/dt-bindings/pinctrl/esp-pinctrl-common.h \
- /media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr/include/zephyr/dt-bindings/pinctrl/esp32s3-gpio-sigmap.h
+ /media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr/include/zephyr/dt-bindings/pinctrl/esp32s3-gpio-sigmap.h \
+ /media/gemy/Linux_Workspace/ITI/Zypher_WS/ITI-Zephyr-Testbench-ESP32S3/Testbench/boards/weact_esp32s3_mini_procpu.overlay
