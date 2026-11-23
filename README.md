@@ -12,18 +12,11 @@ replies. This gives automated, repeatable hardware validation.
 
 ## System overview
 
-```
-┌──────────────────────┐          USB Serial/JTAG          ┌──────────────────────┐
-│  Host PC             │  /dev/ttyACM0  115200 8N1         │  ESP32-S3 Mini       │
-│                      │ ◄───────────────────────────────► │                      │
-│  Robot Framework     │   commands / replies              │  Zephyr firmware     │
-│  (RobotTests/)       │                                   │  (Testbench/)        │
-│                      │                                   │  shell: ping, gpio,  │
-│  SerialLibrary.py    │                                   │  adc, pwm, spi       │
-└──────────────────────┘                                   └──────────────────────┘
-```
+![System overview](docs/images/system_overview.svg)
 
 ## Connection
+
+![Connections](docs/images/connections.svg)
 
 - Connect the ESP32-S3 Mini to the host with the USB-C cable.
 - The console appears as `/dev/ttyACM0` (Linux) at 115200 baud.

@@ -4,6 +4,10 @@ Zephyr RTOS firmware for the WeAct ESP32-S3 Mini. It exposes hardware
 peripherals through a **Zephyr shell** over USB Serial/JTAG so Robot
 Framework (or a human in a serial terminal) can drive them.
 
+## Architecture
+
+![Firmware architecture](../docs/images/firmware_arch.svg)
+
 ## What it does
 
 On boot it prints `ESP32-S3 Testbench ready (shell on USB Serial/JTAG)` and

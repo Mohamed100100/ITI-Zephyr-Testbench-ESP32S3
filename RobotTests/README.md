@@ -3,6 +3,10 @@
 Robot Framework test suites that drive the ESP32-S3 testbench firmware over
 the serial port.
 
+## Architecture
+
+![Robot Framework architecture](../docs/images/robot_arch.svg)
+
 ## What it does
 
 Each `.robot` file is a test suite for one peripheral. Tests use readable
