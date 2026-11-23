@@ -1,0 +1,2 @@
+# Load Sysbuild board Kconfig descriptions.
+osource "/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr/boards/weact/esp32s3_mini/Kconfig.sysbuild"

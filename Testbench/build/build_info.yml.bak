@@ -1,0 +1,5 @@
+west:
+  command: /media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/.venv/bin/west
+    build -p always -b weact_esp32s3_mini/esp32s3/procpu -d build .
+  topdir: /media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject
+  version: 1.5.0

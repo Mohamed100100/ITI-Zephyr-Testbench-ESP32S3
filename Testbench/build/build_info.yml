@@ -1,0 +1,58 @@
+cmake:
+  application:
+    configuration-dir: '/media/gemy/Linux_Workspace/ITI/Zypher_WS/ITI-Zephyr-Testbench-ESP32S3/Testbench'
+    source-dir: '/media/gemy/Linux_Workspace/ITI/Zypher_WS/ITI-Zephyr-Testbench-ESP32S3/Testbench'
+  board:
+    name: 'weact_esp32s3_mini'
+    path:
+     - '/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr/boards/weact/esp32s3_mini'
+    qualifiers: 'esp32s3/procpu'
+    revision: ''
+  devicetree:
+    bindings-dirs:
+     - '/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr/dts/bindings'
+    files:
+     - '/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr/boards/weact/esp32s3_mini/weact_esp32s3_mini_procpu.dts'
+    include-dirs:
+     - '/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/modules/hal/ambiq/dts'
+     - '/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/modules/hal/atmel/include'
+     - '/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/modules/hal/bouffalolab/include'
+     - '/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/modules/hal/bouffalolab/include/zephyr'
+     - '/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/modules/hal/gigadevice/include'
+     - '/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/modules/hal/microchip/include'
+     - '/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/modules/hal/microchip/dts'
+     - '/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/modules/hal/nuvoton/dts'
+     - '/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/modules/hal/nxp/dts'
+     - '/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/modules/hal/stm32/dts'
+     - '/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/modules/hal/ti/dts'
+     - '/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr/include'
+     - '/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr/include/zephyr'
+     - '/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr/dts/common'
+     - '/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr/dts/vendor'
+     - '/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr/dts/rx'
+     - '/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr/dts/x86'
+     - '/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr/dts/xtensa'
+     - '/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr/dts/sparc'
+     - '/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr/dts/riscv'
+     - '/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr/dts/posix'
+     - '/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr/dts/arm64'
+     - '/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr/dts/arm'
+     - '/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr/dts/arc'
+     - '/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr/dts'
+  kconfig:
+    files:
+     - '/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr/boards/weact/esp32s3_mini/weact_esp32s3_mini_procpu_defconfig'
+     - '/media/gemy/Linux_Workspace/ITI/Zypher_WS/ITI-Zephyr-Testbench-ESP32S3/Testbench/prj.conf'
+    user-files:
+     - '/media/gemy/Linux_Workspace/ITI/Zypher_WS/ITI-Zephyr-Testbench-ESP32S3/Testbench/prj.conf'
+  toolchain:
+    name: 'zephyr'
+    path: '/home/gemy/zephyr-sdk-1.0.0'
+  zephyr:
+    version: '4.4.0-rc1'
+    zephyr-base: '/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/zephyr'
+version: '0.1.0'
+west:
+  command: '/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/.venv/bin/west build -p always -b weact_esp32s3_mini/esp32s3/procpu -d build .'
+  topdir: '/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject'
+  version: '1.5.0'
