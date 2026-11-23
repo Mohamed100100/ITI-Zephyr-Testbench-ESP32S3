@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../../resources/common.resource
+Library    ${CURDIR}/../../libraries/TestbenchLibrary.py    ${CURDIR}/../../config/testbench.yaml
 Suite Setup       Connect
 Suite Teardown    Disconnect
 

@@ -14,6 +14,12 @@ static int cmd_ping(const struct shell *sh, size_t argc, char **argv)
     return 0;
 }
 
+static int cmd_hello(const struct shell *sh, size_t argc, char **argv)
+{
+    shell_print(sh, "Hello from ESP32-S3!");
+    return 0;
+}
+
 static int cmd_gpio(const struct shell *sh, size_t argc, char **argv)
 {
     if (argc < 2) {
@@ -106,6 +112,7 @@ static int cmd_spi(const struct shell *sh, size_t argc, char **argv)
 }
 
 SHELL_CMD_REGISTER(ping, NULL, "Liveness check", cmd_ping);
+SHELL_CMD_REGISTER(hello, NULL, "Hello message", cmd_hello);
 SHELL_CMD_REGISTER(gpio, NULL, "GPIO: config/set/get", cmd_gpio);
 SHELL_CMD_REGISTER(adc, NULL, "ADC: read <ch>", cmd_adc);
 SHELL_CMD_REGISTER(pwm, NULL, "PWM: set <ch> <0-100>", cmd_pwm);
