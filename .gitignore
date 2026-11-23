@@ -1,0 +1,7 @@
+build/
+build_*/
+RobotTests/results/
+RobotTests/output.xml
+RobotTests/log.html
+RobotTests/report.html
+.vscode/

@@ -1,7 +1,5 @@
 *** Settings ***
-Library    ${CURDIR}/../libraries/TestbenchLibrary.py    config/testbench.yaml
-Suite Setup       Connect
-Suite Teardown    Disconnect
+Library    ${CURDIR}/../libraries/TestbenchLibrary.py    ${CURDIR}/../config/testbench.yaml
 
 *** Keywords ***
 Connect

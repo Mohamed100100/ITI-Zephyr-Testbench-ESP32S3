@@ -1,5 +1,7 @@
 *** Settings ***
-Resource    ${CURDIR}/../../resources/common.resource
+Resource    ../../resources/common.resource
+Suite Setup       Connect
+Suite Teardown    Disconnect
 
 *** Test Cases ***
 Configure Output Pin
