@@ -1,5 +1,8 @@
 # Command Reference
 
+The firmware uses the **Zephyr shell** over USB Serial/JTAG. You get a
+prompt `tb:~$`, command history, and `help`/`history` for free.
+
 All commands are ASCII lines terminated by \\r\\n. Replies are single lines.
 
 | Command | Reply | Notes |

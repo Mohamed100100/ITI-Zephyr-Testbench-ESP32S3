@@ -1,13 +1,9 @@
 *** Settings ***
-Resource    ../resources/common.resource
+Resource    ../../resources/common.resource
 Suite Setup       Connect
 Suite Teardown    Disconnect
 
 *** Test Cases ***
-Ping Board
-    ${resp}=    Send Command    ping
-    Should Contain    ${resp}    PONG
-
-Help Lists Commands
-    ${resp}=    Send Command    help
-    Should Contain    ${resp}    gpio
+SPI Transfer
+    ${resp}=    Send Command    spi xfer 01 02 03
+    Should Match Regexp    ${resp}    RX( [0-9A-F]{2}){3}

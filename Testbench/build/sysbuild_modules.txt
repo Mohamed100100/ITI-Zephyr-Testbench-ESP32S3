@@ -1,1 +1,0 @@
-"mcuboot":"/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/bootloader/mcuboot":"/media/gemy/Linux_Workspace/ITI/Zypher_WS/zephyrproject/bootloader/mcuboot/boot/zephyr/sysbuild"
