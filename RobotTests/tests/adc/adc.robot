@@ -4,6 +4,6 @@ Suite Setup       Connect
 Suite Teardown    Disconnect
 
 *** Test Cases ***
-SPI Transfer
-    ${resp}=    Send Command    spi xfer 01 02 03
-    Should Match Regexp    ${resp}    RX( [0-9A-F]{2}){3}
+Read ADC Channel 0
+    ${resp}=    Send Command    adc read 0
+    Should Match Regexp    ${resp}    VAL \\d+

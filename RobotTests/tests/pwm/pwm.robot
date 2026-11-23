@@ -4,6 +4,11 @@ Suite Setup       Connect
 Suite Teardown    Disconnect
 
 *** Test Cases ***
-SPI Transfer
-    ${resp}=    Send Command    spi xfer 01 02 03
-    Should Match Regexp    ${resp}    RX( [0-9A-F]{2}){3}
+Set PWM 50 Percent
+    Expect Ok    pwm set 0 50
+
+Set PWM 0 Percent
+    Expect Ok    pwm set 0 0
+
+Set PWM 100 Percent
+    Expect Ok    pwm set 0 100

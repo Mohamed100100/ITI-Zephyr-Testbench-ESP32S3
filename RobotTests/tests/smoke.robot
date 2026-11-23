@@ -1,9 +1,13 @@
 *** Settings ***
-Library    ${CURDIR}/../../libraries/TestbenchLibrary.py    ${CURDIR}/../../config/testbench.yaml
+Library    ${CURDIR}/../libraries/TestbenchLibrary.py    ${CURDIR}/../config/testbench.yaml
 Suite Setup       Connect
 Suite Teardown    Disconnect
 
 *** Test Cases ***
-SPI Transfer
-    ${resp}=    Send Command    spi xfer 01 02 03
-    Should Match Regexp    ${resp}    RX( [0-9A-F]{2}){3}
+Ping Board
+    ${resp}=    Send Command    ping
+    Should Contain    ${resp}    PONG
+
+Help Lists Commands
+    ${resp}=    Send Command    help
+    Should Contain    ${resp}    gpio
