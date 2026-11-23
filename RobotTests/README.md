@@ -5,7 +5,9 @@ the serial port.
 
 ## Architecture
 
-![Robot Framework architecture](../docs/images/robot_arch.svg)
+![Robot Framework architecture](../docs/images/robot_arch.png)
+
+![Test execution flow](../docs/images/test_flow.png)
 
 ## What it does
 

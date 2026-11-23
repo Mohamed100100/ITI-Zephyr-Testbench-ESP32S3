@@ -12,11 +12,11 @@ replies. This gives automated, repeatable hardware validation.
 
 ## System overview
 
-![System overview](docs/images/system_overview.svg)
+![System overview](docs/images/system_overview.png)
 
 ## Connection
 
-![Connections](docs/images/connections.svg)
+![Software layers](docs/images/software_layers.png)
 
 - Connect the ESP32-S3 Mini to the host with the USB-C cable.
 - The console appears as `/dev/ttyACM0` (Linux) at 115200 baud.

@@ -6,7 +6,7 @@ Framework (or a human in a serial terminal) can drive them.
 
 ## Architecture
 
-![Firmware architecture](../docs/images/firmware_arch.svg)
+![Firmware architecture](../docs/images/firmware_arch.png)
 
 ## What it does
 
