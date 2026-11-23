@@ -3,20 +3,24 @@ import time
 import yaml
 
 class TestbenchLibrary:
-    def __init__(self, config_path="config/testbench.yaml"):
+    def __init__(self, config_path="${CURDIR}/../config/testbench.yaml"):
+        # resolve relative to this file if needed
+        import os
+        if not os.path.isabs(config_path) and not os.path.exists(config_path):
+            base = os.path.dirname(os.path.abspath(__file__))
+            config_path = os.path.join(base, "..", "config", "testbench.yaml")
         with open(config_path) as f:
             cfg = yaml.safe_load(f)["testbench"]
         self.port = cfg["port"]
         self.baud = cfg["baudrate"]
         self.timeout = cfg["timeout"]
-        self.ser = None
         self.prompt = cfg.get("prompt", "tb:~$")
+        self.ser = None
 
     def connect(self):
         self.ser = serial.Serial(self.port, self.baud, timeout=self.timeout)
         time.sleep(2)
         self.ser.reset_input_buffer()
-        # wait for prompt
         self._read_until_prompt()
 
     def disconnect(self):
@@ -38,9 +42,7 @@ class TestbenchLibrary:
         self.ser.write((cmd + "\n").encode())
         self.ser.flush()
         buf = self._read_until_prompt()
-        # remove the echoed command and prompt
         lines = [l.strip() for l in buf.splitlines() if l.strip()]
-        # drop echo of command and trailing prompt line
         out = []
         for l in lines:
             if l == cmd.strip():
