@@ -7,6 +7,7 @@
 #include "adc_handler.h"
 #include "pwm_handler.h"
 #include "spi_handler.h"
+#include "uart_handler.h"
 
 static int cmd_ping(const struct shell *sh, size_t argc, char **argv)
 {
@@ -111,9 +112,43 @@ static int cmd_spi(const struct shell *sh, size_t argc, char **argv)
     return -EINVAL;
 }
 
+
+static int cmd_uart(const struct shell *sh, size_t argc, char **argv)
+{
+    if (argc >= 3 && !strcmp(argv[1], "send")) {
+        /* join argv[2..] into one string */
+        char buf[128];
+        size_t off = 0;
+        for (size_t i = 2; i < argc && off < sizeof(buf) - 1; i++) {
+            if (i > 2 && off < sizeof(buf) - 1) buf[off++] = ' ';
+            size_t l = strlen(argv[i]);
+            if (off + l >= sizeof(buf)) l = sizeof(buf) - off - 1;
+            memcpy(buf + off, argv[i], l);
+            off += l;
+        }
+        buf[off] = '\0';
+        int r = uart_handler_send(buf);
+        shell_print(sh, r == 0 ? "OK" : "ERR %d", r);
+        return 0;
+    }
+    if (argc == 2 && !strcmp(argv[1], "recv")) {
+        char buf[128];
+        int n = uart_handler_recv(buf, sizeof(buf));
+        if (n >= 0) {
+            shell_print(sh, "RX %s", buf);
+        } else {
+            shell_print(sh, "ERR %d", n);
+        }
+        return 0;
+    }
+    shell_error(sh, "usage: uart send <text...> | uart recv");
+    return -EINVAL;
+}
+
 SHELL_CMD_REGISTER(ping, NULL, "Liveness check", cmd_ping);
 SHELL_CMD_REGISTER(hello, NULL, "Hello message", cmd_hello);
 SHELL_CMD_REGISTER(gpio, NULL, "GPIO: config/set/get", cmd_gpio);
 SHELL_CMD_REGISTER(adc, NULL, "ADC: read <ch>", cmd_adc);
 SHELL_CMD_REGISTER(pwm, NULL, "PWM: set <ch> <0-100>", cmd_pwm);
 SHELL_CMD_REGISTER(spi, NULL, "SPI: xfer <hex...>", cmd_spi);
+SHELL_CMD_REGISTER(uart, NULL, "UART1: send/recv", cmd_uart);

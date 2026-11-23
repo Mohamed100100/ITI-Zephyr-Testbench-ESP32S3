@@ -14,3 +14,10 @@
 &ledc0 {
     status = "okay";
 };
+
+&uart1 {
+    status = "okay";
+    pinctrl-0 = <&uart1_default>;
+    pinctrl-names = "default";
+    current-speed = <115200>;
+};

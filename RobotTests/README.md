@@ -21,6 +21,7 @@ keywords provided by the per-peripheral Python libraries:
 | `tests/adc/adc.robot` | `AdcLibrary` | `Read Channel` |
 | `tests/pwm/pwm.robot` | `PwmLibrary` | `Set Duty` |
 | `tests/spi/spi.robot` | `SpiLibrary` | `Transfer` |
+| `tests/uart/uart.robot` | `UartLibrary` | `Send Text`, `Receive Text` |
 
 Shared serial logic lives in `libraries/serial_common.py`.
 

@@ -8,5 +8,6 @@ target_sources(app PRIVATE
     src/adc_handler.c
     src/pwm_handler.c
     src/spi_handler.c
+    src/uart_handler.c
 )
 target_include_directories(app PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/inc)
